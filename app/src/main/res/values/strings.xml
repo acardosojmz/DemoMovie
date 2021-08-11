@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">DemoMovie</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </string>
+    <string name="title">Train to Busan</string>
+    <string name="genre">Drama</string>
+    <string name="running_time"> 1h 50m</string>
+
+
+</resources>
