@@ -28,6 +28,7 @@ object DatabaseModule {
     }
 
     @Provides
+    @Singleton
     fun provideMovieDao(appDatabase: AppDatabase): MovieDao {
         return appDatabase.movieDao()
     }

@@ -26,8 +26,6 @@ class ListingViewModel  @Inject constructor(private val movieRepository: MovieRe
         fetchMovies()
     }
 
-
-
     private fun fetchMovies() {
         viewModelScope.launch {
             movieRepository.fetchTrendingMovies().collect {

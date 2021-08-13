@@ -12,6 +12,8 @@ import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
+import android.app.Application
+import okhttp3.Interceptor
 
 
 @Module
@@ -19,6 +21,14 @@ import javax.inject.Singleton
 object NetworkModule  {
     private const val baseUrl = Config.BASE_URL
 
+
+    @Provides
+    @Singleton
+    fun provideLoggingInterceptor(): HttpLoggingInterceptor {
+        return HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
+    }
+
+    @Singleton
     @Provides
     fun  provideOkHttpClient  (loggingInterceptor: HttpLoggingInterceptor
     ): OkHttpClient {

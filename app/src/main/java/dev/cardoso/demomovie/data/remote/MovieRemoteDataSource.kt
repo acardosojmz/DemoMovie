@@ -1,5 +1,7 @@
 package dev.cardoso.demomovie.data.remote
 
+import dagger.Provides
+import dagger.hilt.android.scopes.ViewModelScoped
 import dev.cardoso.demomovie.model.MovieDesc
 import dev.cardoso.demomovie.model.TrendingMovieResponse
 import dev.cardoso.demomovie.network.services.MovieService
@@ -15,6 +17,7 @@ import javax.inject.Singleton
  * fetches data from remote source
  */
 
+@ViewModelScoped
 class MovieRemoteDataSource @Inject constructor(private val retrofit: Retrofit) {
 
     suspend fun fetchTrendingMovies(): Result<TrendingMovieResponse> {
